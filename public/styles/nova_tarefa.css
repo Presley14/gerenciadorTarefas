@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.container{
+    background-color: rgb(238, 235, 235);
+}
+
+.formulario{
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 70%;
+}
+
+.titulo{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(88, 88, 88);
+    outline: none;
+}
+
+.descricao{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(88, 88, 88);
+    outline: none;
+}
+
+.botao_caixa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.caixa{
+    margin-top: 15px;
+}
+
+hr{
+    margin: 20px 0;
+}
+
+h4{
+    font-size: 25px;
+    color: rgb(114, 119, 111);
+}
+
+.btn_criar{
+    padding: 15px;
+    background-color: rgb(136, 214, 59);
+    width: 20%;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.btn_criar:hover{
+    background-color: rgb(114, 176, 52);
+    cursor: pointer;
+}
+
+.btn_cancelar{
+    padding: 15px;
+    background-color: rgb(185, 184, 184);
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    margin-left: 20px; 
+}
+
+.btn_cancelar:hover{
+    background-color: rgb(139, 139, 139);
+}

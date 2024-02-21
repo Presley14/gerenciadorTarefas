@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.nav{
+    background-color:darkorange;
+    padding: 10px;
+}
+
+.nav-caixa{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-titulo{
+    margin-left: 100px;
+}
+
+.nav-sair{
+    margin-right: 20px;
+    display: flex;
+}
+
+.nome-caixa{
+    background-color: rgb(144, 186, 102);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.nome{
+    margin: 5px 5px 5px 5px;
+}
+
+.usuario{
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.logout{
+    background-color: rgb(241, 60, 60);
+    margin-left: 20px;
+    border-radius: 5px;
+}
+
+.logout:hover{
+    background-color: rgb(255, 25, 25);
+    
+}
+
+img{
+    height: 30px;
+    width: 30px;
+}
+
+a{
+    padding: 8px;
+}
