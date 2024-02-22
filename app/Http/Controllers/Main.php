@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use App\Models\TaskModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 
 class Main extends Controller
 {
@@ -10,6 +11,7 @@ class Main extends Controller
         $dados = [
             'title' => 'Início',
             'datatables' => true,
+            'tarefas' => $this->buscar_tarefa()
         ];
 
         return view('home',$dados);
@@ -42,12 +44,12 @@ class Main extends Controller
         $textoDescricao = $request->input('descricao');
 //------------ Selecionar tarefa com mesmo nome
         $model = new TaskModel();
-        $pegarTarefa = $model->where('id_user', '=', session('id'))
+        $selecionarTarefa = $model->where('id_user', '=', session('id'))
                              ->where('task_name', '=', $textoTitulo)
                              ->whereNull('deleted_at')
                              ->first();
 //------------  Informar erro de tarefa já existente     
-        if($pegarTarefa){
+        if($selecionarTarefa){
             return redirect()->route('nova_tarefa')
                              ->withInput()
                              ->with('task_error', 'Já existe uma terefa com esse nome.');
@@ -62,10 +64,33 @@ class Main extends Controller
 
         return redirect()->route('home');
     }
-//------------  Pesquisar tarefas  ------------//
-    public function buscar_tarefa(){
-        
+//------------  Buscar tarefas  ------------//
+    private function buscar_tarefa(){
+        $model = new TaskModel();
+        $tarefas = $model->where('id_user', '=', session('id'))
+                         ->whereNull('deleted_at')
+                         ->get();
+
+        $colecao = [];
+        foreach($tarefas as $tarefa){
+            $link_editar = '<a href=" '.route('editar_tarefa', ['id' => Crypt::encrypt($tarefa->id)]).' ">edtidar</a> ';
+            $link_deletar = '<a href="'. route('deletar_tarefa', ['id' => Crypt::encrypt($tarefa->id)]) .'">deletar</a>';
+
+            $colecao[] = [
+                'nome_tarefa' => $tarefa->task_name,
+                'status_tarefa' => $this->status($tarefa->task_status),
+                'actions_tarefa' => $link_editar.$link_deletar
+            ];
+        }
+
+        return $colecao;
+
+    
     }
+    private function status(){
+            return 'desconhecido';
+    }
+    
 
 
 

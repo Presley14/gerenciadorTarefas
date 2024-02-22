@@ -1,21 +1,15 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-}
 
-.container{
+
+.main_novaTarefa{
     background-color: rgb(238, 235, 235);
+    height: calc(100vh - 5vh);
+    padding-top: 20vh;
 }
 
 .formulario{
-    position: absolute;
-    top: 50vh;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
+    margin: auto;
     width: 70%;
+    margin-bottom: 10px;
 }
 
 .titulo{

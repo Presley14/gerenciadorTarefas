@@ -17,8 +17,14 @@ Route::middleware('CheckLogin')->group(function(){
 
     Route::get('nova_tarefa', [Main::class, 'nova_tarefa'])->name('nova_tarefa');
     Route::post('submeter_nova_tarefa', [Main::class, 'submeter_nova_tarefa'])->name('submeter_nova_tarefa');
-    
+
     Route::get('pesquisar_tarefa', [Main::class, 'pesquisar_tarefa'])->name('pesquisar_tarefa');
+
+    Route::get('/editar_tarefa/{id}', [Main::class], 'editar_tarefa')->name('editar_tarefa');
+    Route::post('/editar_tarefa', [Main::class], 'editar_tarefa')->name('editar_tarefa');
+
+    Route::get('/deletar_tarefa/{id}', [Main::class], 'deletar_tarefa')->name('deletar_tarefa');
+    Route::get('/deletar_tarefa/{id}', [Main::class], 'deletar_tarefa')->name('deletar_tarefa');
 });
 
 Route::middleware('CheckLogout')->group(function(){

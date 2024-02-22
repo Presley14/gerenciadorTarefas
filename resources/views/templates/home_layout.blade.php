@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('styles/nav.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('styles/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/home.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/nova_tarefa.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/home_layout.css') }}">
     <title>{{ $title }}</title>
     
     @if(!empty($datatables))

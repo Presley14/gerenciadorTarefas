@@ -1,7 +1,8 @@
-@extends('templates/main_layout')
+@extends('templates/home_layout')
 
 @section('content')
-    <body class="container">
+
+    <div class="main_novaTarefa">
         <div class="formulario">
             <h4>Nova tarefa</h4>
             <hr>
@@ -27,5 +28,7 @@
                 </div>
             </form>
         </div>
-    </body>
+    </div>
+
+    
 @endsection

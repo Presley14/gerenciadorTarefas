@@ -1,7 +1,7 @@
 @extends('templates/login_layout')
 @section('content')
     
-<body>
+
     <div class="main">
         <h1 class="titulo">Gestor de tarefas</h1>
         <form action="{{ route( 'submeter_login' )}}" method="POST">
@@ -40,6 +40,6 @@
         </div>
     </div>
     <p class="inf-adicional">Crie uma conta e gerencie suas tarefas do dia-a-dia.</p>
-</body>
+
 
 @endsection

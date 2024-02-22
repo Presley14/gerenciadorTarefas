@@ -1,3 +1,10 @@
+.main_home{
+    background-color: rgb(238, 235, 235);
+    height: calc(100vh - 5vh);
+    padding-top: 10vh;
+    
+}
+
 .topo{
     display: flex;
     align-items: center;
@@ -71,4 +78,56 @@
     margin-right: 5px;
 }
 
+/* Tabela */
 
+.coluna_tarefa{
+    padding: 15px;
+    width: 60%;
+}
+
+.coluna{
+    padding: 15px;
+    width: 20%;
+}
+
+.cabeca{
+    background-color: rgb(104, 216, 90);
+}
+
+.tabela_tarefas{
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: cadetblue;
+    width: 80%;
+    
+}
+
+
+.sem_tarefas_link{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: 0;
+    margin-left: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sem_tarefas_link:hover{
+   color: darkorange; 
+}
+
+.sem_terefa_caixa{
+    display: flex;
+    text-align: center;
+    justify-content:center;
+    margin-top: 100px;
+}
+
+.sem_tarefas_link_caixa{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}

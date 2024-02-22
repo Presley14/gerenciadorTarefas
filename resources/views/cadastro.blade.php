@@ -1,7 +1,7 @@
 @extends('templates/login_layout')
 @section('content')
 
-<body>
+
     <div class="main">
         <h1 class="titulo">Cadastrar-se</h1>
         <p class="rapido">É rápido e fácil.</p>
@@ -21,7 +21,5 @@
             </div>
         </form> 
     </div>
-    
-</body>
 
 @endsection
