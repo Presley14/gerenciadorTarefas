@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ asset('styles/home.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/nova_tarefa.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/home_layout.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/excluir_tarefa.css') }}">
     <title>{{ $title }}</title>
     
     @if(!empty($datatables))

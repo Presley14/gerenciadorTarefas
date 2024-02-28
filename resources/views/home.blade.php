@@ -4,14 +4,24 @@
     <div class="main_home">
         <div class="topo">
             <div>
-                <h1>Tarefas</h1>
+                <h1 class="titulo_pesquisa">Tarefas </h1>
             </div>
-            <form action="" method="POST">
+            <form action="{{ route('pesquisar_tarefa') }}" method="POST">
                 @csrf
                 <div class="pesquisar_caixa">
                     <label for="pesquisar">Pesquisar:</label>
-                    <input class="pesquisar" type="text" name="pesquisar" id="pesquisar" placeholder="Pesquisar tarefas...">
-                    <button class="btn_buscar" type="submit"><img src="images/procurar.png" alt=""></img></button>
+                    <input class="pesquisar_" type="text" name="pesquisar" id="pesquisar" placeholder="Pesquisar tarefas...">
+                    <button class="btn_buscar" type="submit"><img class="lupa" src="images/lupa.png" alt=""></img></button>
+                </div>
+                <div class="filter_caixa">
+                    <label>Estado:</label>
+                    <select name="filtro" id="status_filtro" class="pesquisar">
+                        <option value="{{ Crypt::encrypt('all')}}" @php echo (!empty($filtro) && $filtro == 'all') ? 'selected' : ''@endphp>Todas</option>
+                        <option value="{{ Crypt::encrypt('new')}}" @php echo (!empty($filtro) && $filtro == 'new') ? 'selected' : ''@endphp>Nova</option>
+                        <option value="{{ Crypt::encrypt('in_progress')}}" @php echo (!empty($filtro) && $filtro == 'in_progress') ? 'selected' : ''@endphp>Em progresso</option>
+                        <option value="{{ Crypt::encrypt('cancelled')}}" @php echo (!empty($filtro) && $filtro == 'cancelled') ? 'selected' : ''@endphp>Cancelada</option>
+                        <option value="{{ Crypt::encrypt('completed')}}" @php echo (!empty($filtro) && $filtro == 'completed') ? 'selected' : ''@endphp>Concluída</option>
+                    </select>
                 </div>
             </form>
             <div class="nova_tarefa">
@@ -19,29 +29,26 @@
             </div>
         </div>
         <hr>
-        <div>
-            @if(count($tarefas) > 0)
+        <div class="caixa_tabela">
+            @if(!is_null($tarefas)) 
                 <table id="tabela_tarefas" class="tabela_tarefas">
                     <thead class="cabeca">
                         <tr>
                             <th class="coluna_tarefa">Tarefas</th>
-                            <th class="coluna">Status</th>
-                            <th class="coluna">Mais</th>
+                            <th class="coluna_status">Status</th>
+                            <th class="coluna_mais">Mais</th>
                         </tr>
                     </thead>
-                    <tbody></tbody>
+                    <tbody class="corpo_body">
+                        <td class="corpo_td"></td>
+                    </tbody>
                 </table>
-            @else
-                <div class="sem_terefa_caixa">
-                    <div class="sem_tarefas_link_caixa">
-                        <p class="sem_tarefas">Você ainda não possue tarefas registradas. Criar</p><a class="sem_tarefas_link" href="{{ route('nova_tarefa') }}">nova tarefa.</a> 
-                    </div>
-                </div>
             @endif  
         </div>
     </div>
     
     <script>
+        //********  Pesquisar  ********
         $(document).ready(function(){
             $('#tabela_tarefas').DataTable({
                 data: @json($tarefas),
@@ -60,5 +67,12 @@
                 "paging": false,
             });
         });
+        //******** Criar link para cada esdado selecionado  ********
+        let status_filtro = document.querySelector('#status_filtro')
+        status_filtro.addEventListener('change', () => {
+            let valor_status = status_filtro.value
+            window.location.href = "{{url('/filtrar_tarefa')}}" + "/" + valor_status
+        })
+
     </script>
 @endsection

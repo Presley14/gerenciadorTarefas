@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: rgb(216, 249, 224);
+    background-color: rgb(218, 214, 214);
 }
 
 form{
@@ -28,8 +28,10 @@ form{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
-    color: rgb(136, 214, 59);
+    color: white;
+    background-color:rgb(6, 111, 122);
+    padding: 18px 0;
+    border-radius: 5px 5px 0 0;
 }
 
 label{
@@ -51,27 +53,28 @@ input{
 
 input:hover,
 input:focus {
-    border: 1px solid rgb(129, 244, 14);
+    border: 1px solid rgb(36, 122, 184);
 }
 
 .button-entrar{
     width: 100%;
     padding: 15px;
-    background-color: rgb(136, 214, 59);
+    background-color: rgb(108, 165, 206);
     margin: 20px 0 0 0;
     border: none;
     border-radius: 7px;
     color: white;
     font-size: 20px;
+    cursor: pointer;
 }
 
 button:hover{
-    background-color: rgb(87, 138, 36);
+    background-color: rgb(36, 122, 184);
 }
 
 .botao-criar{
     padding: 15px;
-    background-color: darkorange;
+    background-color: rgb(251, 173, 78);
     width: 50%;
     text-align: center;
     text-decoration: none;
@@ -82,7 +85,7 @@ button:hover{
 }
 
 .botao-criar:hover{
-    background-color: rgb(184, 101, 0);
+    background-color: rgb(255, 140, 0);
 }
 
 .botao-cadastro-caixa{
@@ -130,12 +133,12 @@ hr{
 }
 
 .cancelar:hover{
-    background-color: rgb(139, 139, 139);
+    background-color: rgb(94, 93, 93);
 }
 
 .botao-cadastro{
     padding: 15px;
-    background-color: rgb(136, 214, 59);
+    background-color: rgb(108, 165, 206);
     text-align: center;
     text-decoration: none;
     color: white;
@@ -143,6 +146,7 @@ hr{
     border-radius: 7px;
     margin-bottom: 20px;
     border: none;
+    cursor: pointer;
 }
 
 .botao-caixa{
@@ -156,4 +160,24 @@ hr{
     color: red;
     margin: 5px;
 }
+/* botao dentro do input :  "wrapping"*/
+.input-com-botao{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.input-com-botao img{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.olho{
+    width: 30px;
+    height: 30px;
+    filter: invert(50%);
+}

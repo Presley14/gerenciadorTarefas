@@ -1,11 +1,15 @@
 
 .nav{
-    background-color:darkorange;
-    padding: 10px;
-    position: fixed;
+    background-color:rgb(6, 111, 122);
+    padding: 6px;
+    position: absolute;
     top: 0;
     width: 100%;
-    
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.3);
+}
+
+.titulo_pagina{
+    color: rgb(255, 255, 255);
 }
 
 .nav-caixa{
@@ -23,31 +27,29 @@
     display: flex;
 }
 
-.nome-caixa{
-    background-color: rgb(144, 186, 102);
+.nome_caixa{
     padding: 5px;
     border-radius: 5px;
 }
 
 .nome{
     margin: 5px 5px 5px 5px;
+    color: aliceblue;
 }
 
-.usuario{
+.usuario_nav{
     display: flex;
     align-items: center;
-    margin-right: 5px;
+    filter: invert(100%);
 }
 
-.logout{
-    background-color: rgb(241, 60, 60);
-    margin-left: 20px;
-    border-radius: 5px;
+.logout img{
+    height: 30px;
+    width: 30px;
 }
 
-.logout:hover{
-    background-color: rgb(255, 25, 25);
-    
+.logout img:hover{
+    filter: invert(90%);
 }
 
 img{

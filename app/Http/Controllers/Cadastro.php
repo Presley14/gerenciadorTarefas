@@ -22,20 +22,28 @@ class Cadastro extends Controller
     public function criarCadastro(Request $request)
     {
         $request->validate([
-            'nome' => 'required|min:3',
-            'senha' => 'required|min:3',
+            'nome' => 'required|min:3|max:25',
+            'senha' => 'required|min:3|max:25',
+        ],
+        [
+            'nome.required' => 'O campo é obrigatório.',
+            'senha.required' => 'O campo é obrigatorio.',
+
+            'nome.min' => 'O campo deve conter no minímo 3 caracteres.',
+            'senha.min' => 'O campo deve conter no minímo 3 caracteres.',
+
+            'nome.max' => 'O campo deve conter no máximo 25 caracteres.',
+            'senha.max' => 'O campo deve conter no máximo 25 caracteres.',
+
         ]);
 
         $user = UserModel::create([
-            'username' => $request->nome,
-            'password' => Hash::make($request->senha),
+            'username' => $request->input('nome'),
+            'password' => Hash::make($request->input('senha')),
         ]);
 
-        // Log the user in or redirect to login page
-        // Implement your logic here
-
         return redirect()->route('home')
-                         ->with('success', 'Registration successful!');
+                         ->with('success', 'Cadastro realizado com sucesso!');
     }
 
     
