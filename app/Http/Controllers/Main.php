@@ -31,14 +31,14 @@ class Main extends Controller
         }else{
             $model = new TaskModel();
             $tarefas = $model->where('id_user', '=', session('id'))
-                        ->whereNull('deleted_at')
-                        ->get();
+                             ->whereNull('deleted_at')
+                             ->get();
 
             $dados['tarefas'] = $this->buscar_tarefa($tarefas);
             $dados['filtro'] = null;
         }
             
-        return view('home',$dados);
+        return view('home', $dados);
     }
 //------------  View: Criar nova tarefa  ------------//   
     public function nova_tarefa(){

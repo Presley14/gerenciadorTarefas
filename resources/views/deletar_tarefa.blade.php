@@ -1,6 +1,6 @@
 @extends('templates/home_layout')
 @section('content')
-    <div >
+    <div class="">
         <div class="caixa_titulo_excluirTarefa">
             <h4 class="titulo_excluirTarefa">Excluir tarefa</h4>
         </div>
@@ -12,5 +12,5 @@
             <a class="btn_cancelar" href="{{ route('home') }}">Cancelar</a>
             <a class="btn_excluir" href="{{ route('deletar_tarefa_selecionada', ['id' => Crypt::encrypt($tarefa->id)]) }}">Excluir</a>    
         </div>    
-    </div>   
+    </div>
 @endsection

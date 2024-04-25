@@ -1,8 +1,8 @@
-div .main_excluir{
 
-}
 
-.main_excluir{
+@media screen and (min-width: 992px) {
+  
+  .main_excluir{
     position: absolute;
     top: 40vh;
     left: 50%;
@@ -91,3 +91,6 @@ div .main_excluir{
 .titulo_excluirTarefa{
   color: rgb(114, 119, 111);
 }
+  
+}
+

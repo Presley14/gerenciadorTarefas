@@ -14,7 +14,7 @@ class UserModel extends Model
     protected $fillable = [
         
         'password',
-        'username', // Adicione aqui
+        'username',
     ];
 }
 

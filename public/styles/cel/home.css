@@ -1,0 +1,212 @@
+
+@media screen and (min-width:360px) and (max-width:768px) {
+
+    .main_home{
+        background-color: rgb(218, 214, 214);
+        height: calc(100%);
+        padding-top: 7vh;
+        width: 100%;
+    }
+    
+    .topo{
+        
+        background-color: darkorange;
+        padding: 10px;
+        display: block;
+    }
+
+    .pesq_btn{
+        display: flex;
+    }
+    
+    .titulo_pesquisa{
+        display: none;
+        color: rgb(6, 111, 122);
+    }
+
+    .form_topo{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .lupa{
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        filter: invert(40%);
+    }
+    
+    .lupa:hover{
+       background-color: darkorange;
+       border-radius: 0 5px 5px 0;
+       filter: invert(100%);
+    }
+    
+    .nova_tarefa{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        background-color: rgb(101, 101, 101);
+        margin-top: 10px;
+    }
+    
+    .btn_buscar{
+        display: flex;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        background-color: white;
+        border-radius: 0 5px 5px 0;
+    }
+    
+    .usuario{
+        filter: invert(100%);
+    }
+    
+    .pesquisar_{
+        padding: 10px;
+        border-radius: 5px 0 0 5px;
+        width: 130px;
+        border: none; 
+    }
+        
+    .pesquisar{
+        padding: 10px;
+        border-radius: 5px;
+        width: 150px;
+        border: none;
+        display: block;
+    }
+    
+    .filter_caixa{
+        display: block;
+    }
+    
+    .pesquisar_caixa label{
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+    
+    .nova_tarefa:hover{
+        background-color: rgb(0, 115, 182);
+    }
+    
+    .img_nova_tarefa{
+        width: 35px;
+    }
+    
+    .link_nova_tarefa{
+        text-decoration: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .p{
+        display: flex;
+        margin-right: 5px;
+        
+    }
+    
+    /* Tabela */
+    
+    .coluna_tarefa{
+        padding: 15px 0 15px 20px;
+        width: 60%;
+        border-radius: 5px 0 0 0; 
+    }
+
+    .centralizar{
+        overflow-x: auto;
+    }
+/*rolagem*/
+
+
+/*rolagem*/    
+    
+    .coluna_status{
+        padding: 15px 0 15px 60px;
+        width: 10%;
+        text-align: center;
+    }
+    
+    .coluna_mais{
+        padding: 15px 0 15px 60px;
+        width: 10%;
+        text-align: center;
+        border-radius:0 5px  0 0; 
+    }
+    
+    .cabeca{
+        background-color: rgb(99, 99, 99);
+        color: aliceblue;
+    }
+    
+    .cabeca tr{
+       border-radius: 5px; 
+    }
+    
+    .tabela_tarefas{
+        background-color: rgb(201, 199, 199);
+        border-radius: 5px;
+        width: 100%;
+
+        width: 90%; /* Define a largura da tabela */
+        min-width: 700px; /* Define uma largura máxima opcional */
+    }
+    
+    .caixa_tabela{
+        padding-top: 30px;
+        padding-bottom: 50px;
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+    }
+    
+    
+    .sem_tarefas_link{
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        padding: 0;
+        margin-left: 5px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    .sem_tarefas_link:hover{
+       color: darkorange; 
+    }
+    
+    .sem_terefa_caixa{
+        display: flex;
+        text-align: center;
+        justify-content:center;
+        margin-top: 100px;
+    }
+    
+    .sem_tarefas_link_caixa{
+        display: flex;
+        align-items: center;
+        justify-content:center;
+    }
+    
+    
+    .tabela_tarefas tbody td{
+        border-bottom: solid 1px black;
+        border-left: solid 1px black;
+    }
+    
+    .img_titulo{
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+        filter: invert(100%);
+    }
+}

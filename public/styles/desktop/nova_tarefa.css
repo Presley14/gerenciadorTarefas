@@ -1,0 +1,106 @@
+
+@media screen and (min-width: 992px) {
+  
+    .main_novaTarefa{
+        background-color: rgb(238, 235, 235);
+        height: calc(100vh - 5vh);
+        padding-top: 20vh;
+    }
+    
+    .formulario{
+        margin: auto;
+        width: 70%;
+        margin-bottom: 10px;
+    }
+    
+    .titulo{
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid rgb(88, 88, 88);
+        outline: none;
+        
+    }
+    
+    .caixa label{
+        margin-bottom: 5px;
+    }
+    
+    .descricao{
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid rgb(88, 88, 88);
+        outline: none;
+        
+    }
+    
+    .botao_caixa{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+    }
+    
+    .caixa{
+        margin-top: 15px;
+    }
+    
+    hr{
+        margin: 20px 0;
+    }
+    
+    h4{
+        font-size: 25px;
+        color: rgb(114, 119, 111);
+    }
+    
+    .btn_criar{
+        padding: 15px;
+        background-color: rgb(108, 165, 206);
+        width: 20%;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        border-radius: 7px;
+        margin-bottom: 20px;
+        border: none;
+    }
+    
+    .btn_criar:hover{
+        background-color: rgb(36, 122, 184);
+        cursor: pointer;
+    }
+    
+    .btn_cancelar{
+        padding: 15px;
+        background-color: rgb(157, 157, 157);
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        border-radius: 7px;
+        margin-bottom: 20px;
+        margin-left: 20px; 
+    }
+    
+    .btn_cancelar:hover{
+        background-color: rgb(90, 90, 90);
+    }
+    
+    .status_selecionado{
+        width: 30%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid rgb(88, 88, 88);
+        outline: none;
+    }
+    
+    .caixa_status_selecionado label{
+        width: 100%;
+        display: block;
+        margin-bottom: 5px;
+    }
+  
+}

@@ -1,0 +1,99 @@
+
+
+@media screen and (min-width:360px) and (max-width:768px) {
+  
+    .main_excluir{
+      position: absolute;
+      top: 40vh;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgb(255, 255, 255);
+      padding: 20px;
+      width: 80%;
+      display: flex;
+      border-radius: 5px;
+  }
+  
+  .link_editar{
+      border-radius: 5px;
+      padding: 4px;
+  }
+  
+  .link_editar:hover{
+    background-color: rgb(255, 230, 9);  
+  }
+  
+  .link_excluir{
+    border-radius: 100%;
+  }
+  
+  .link_excluir:hover{
+      filter: invert(100%);
+  }
+  
+  
+  .tarefa_description{
+    background-color: rgb(255, 255, 255);
+    padding: 5px 0 15px 50px;
+  }
+  
+  .tarefa_nome{
+    font-size: 18px;
+    padding: 5px 0 5px 20px;
+  }
+  
+  .tarefa_status_mais{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn_excluir{
+    padding: 15px;
+      background-color: rgb(211, 39, 0);
+      width: 40%;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+      border-radius: 7px;
+      margin-bottom: 20px;
+      border: none;
+  }
+  
+  .btn_excluir:hover{
+    background-color: rgb(255, 0, 0);
+    cursor: pointer;
+  }
+  
+  .titulo_deletar{
+    padding-right: 5px;
+  }
+  
+  .caixa_link_{
+    position: absolute;
+    top: 65vh;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    display: flex;
+  }
+  
+  .caixa_link_ .btn_excluir{
+    margin-left: 20px;
+  }
+  
+  .caixa_titulo_excluirTarefa{
+    display: flex;
+    padding-top: 130px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .titulo_excluirTarefa{
+    color: rgb(114, 119, 111);
+  }
+
+    
+}
+  
+  

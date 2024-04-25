@@ -6,12 +6,14 @@
             <div>
                 <h1 class="titulo_pesquisa">Tarefas </h1>
             </div>
-            <form action="{{ route('pesquisar_tarefa') }}" method="POST">
+            <form class="form_topo" action="{{ route('pesquisar_tarefa') }}" method="POST">
                 @csrf
                 <div class="pesquisar_caixa">
                     <label for="pesquisar">Pesquisar:</label>
-                    <input class="pesquisar_" type="text" name="pesquisar" id="pesquisar" placeholder="Pesquisar tarefas...">
-                    <button class="btn_buscar" type="submit"><img class="lupa" src="images/lupa.png" alt=""></img></button>
+                    <div class="pesq_btn">
+                        <input class="pesquisar_" type="text" name="pesquisar" id="pesquisar" placeholder="Pesquisar tarefas...">
+                        <button class="btn_buscar" type="submit"><img class="lupa" src="images/lupa.png" alt=""></img></button>                        
+                    </div>
                 </div>
                 <div class="filter_caixa">
                     <label>Estado:</label>
@@ -30,23 +32,26 @@
         </div>
         <hr>
         <div class="caixa_tabela">
-            @if(!is_null($tarefas)) 
-                <table id="tabela_tarefas" class="tabela_tarefas">
-                    <thead class="cabeca">
-                        <tr>
-                            <th class="coluna_tarefa">Tarefas</th>
-                            <th class="coluna_status">Status</th>
-                            <th class="coluna_mais">Mais</th>
-                        </tr>
-                    </thead>
-                    <tbody class="corpo_body">
-                        <td class="corpo_td"></td>
-                    </tbody>
-                </table>
+            @if(!is_null($tarefas))
+                <div class="centralizar">
+                    <div class="scrollable-content">
+                        <table id="tabela_tarefas" class="tabela_tarefas">
+                            <thead class="cabeca">
+                                <tr>
+                                    <th class="coluna_tarefa">Tarefas</th>
+                                    <th class="coluna_status">Status</th>
+                                    <th class="coluna_mais">Mais</th>
+                                </tr>
+                            </thead>
+                            <tbody class="corpo_body">
+                                <td class="corpo_td"></td>
+                            </tbody>
+                        </table> 
+                    </div>
+                </div>
             @endif  
         </div>
     </div>
-    
     <script>
         //********  Pesquisar  ********
         $(document).ready(function(){
@@ -74,5 +79,6 @@
             window.location.href = "{{url('/filtrar_tarefa')}}" + "/" + valor_status
         })
 
+        //******** rolagem da tabela no cel  ********
     </script>
 @endsection

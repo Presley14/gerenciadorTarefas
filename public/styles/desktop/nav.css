@@ -1,0 +1,67 @@
+
+@media screen and (min-width: 992px) {
+  
+    .nav{
+        background-color:rgb(6, 111, 122);
+        padding: 6px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    .titulo_pagina{
+        color: rgb(255, 255, 255);
+    }
+    
+    .nav-caixa{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .nav-titulo{
+        margin-left: 100px;
+    }
+    
+    .nav-sair{
+        margin-right: 20px;
+        display: flex;
+    }
+    
+    .nome_caixa{
+        padding: 5px;
+        border-radius: 5px;
+    }
+    
+    .nome{
+        margin: 5px 5px 5px 5px;
+        color: aliceblue;
+    }
+    
+    .usuario_nav{
+        display: flex;
+        align-items: center;
+        filter: invert(100%);
+    }
+    
+    .logout img{
+        height: 30px;
+        width: 30px;
+    }
+    
+    .logout img:hover{
+        filter: invert(90%);
+    }
+    
+    img{
+        height: 30px;
+        width: 30px;
+    }
+    
+    a{
+        padding: 8px;
+    }
+  
+}
+

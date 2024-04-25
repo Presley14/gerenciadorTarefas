@@ -57,7 +57,7 @@ class Login extends Controller
         //--- Informar erro de login
         return redirect()->route('login')
                          ->withInput()
-                         ->with('login_error', 'Login inválido !');
+                         ->with('login_error', 'Login inválido!');
             
     }
 

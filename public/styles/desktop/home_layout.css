@@ -11,3 +11,11 @@ html, body {
     margin: 0;
     background-color: rgb(218, 214, 214);
 }
+
+/*
+Pequenas telas: até 600px
+celular: de 600px até 768px
+Tablets: de 768px até 992px
+Desktop: de 992px até 1200px
+Grandes: acima de 1200px
+*/

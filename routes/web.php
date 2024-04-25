@@ -5,7 +5,7 @@ use App\Http\Controllers\Login;
 use App\Http\Controllers\Main;
 use Illuminate\Support\Facades\Route;
 
-
+// middleware indicador que esta logado
 Route::middleware('CheckLogin')->group(function(){
     Route::get('/home', [Main::class, 'home'])->name('home');
     Route::get('/logout', [Login::class, 'logout'])->name('logout');
@@ -26,6 +26,7 @@ Route::middleware('CheckLogin')->group(function(){
 
 });
 
+// middleware indicador que nao esta logado
 Route::middleware('CheckLogout')->group(function(){
     Route::get('/cadastro', [Cadastro::class, 'cadastro'])->name('cadastro');
     Route::post('/criarCadastro', [Cadastro::class, 'criarCadastro'])->name('criarCadastro');
